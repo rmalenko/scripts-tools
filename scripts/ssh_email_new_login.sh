@@ -12,7 +12,6 @@ LOG_IP_HOST="$(host ${LOG_IP} | awk '{print substr($5, 1, length($5)-1)}')"
 
 # SendGrid Email setup
 SENDGRID_API_KEY="SG.5dr"
-# EMAIL_TO="rmalenko@gmail.com"
 EMAIL_TO="6@tasks.teamwork.com"
 EMAIL_SUBJECT="🦊 !! Unrecognized login on $(hostname)"
 EMAIL_FROM="ML <devops@domain.com>"
