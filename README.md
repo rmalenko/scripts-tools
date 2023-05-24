@@ -17,3 +17,14 @@
 [**host-tracker-list-zones-yaml.py**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/host-tracker-list-zones-yaml.py) - Generate domain list in YAML file for Prometheus domainexporter
 
 [**ps_mem.py**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/ps_mem.py) - Try to determine how much RAM is currently being used per program.
+
+
+[**borg_backup_staging_new.sh**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/borg_backup_staging_new.sh) - This script creates separated backups per project, specifically volume uploads and MySQL dumps. It initially sets up variables such as the location and format of the backup storage, and the number of backups to keep. It then sets up variables for various email settings and metrics settings, and starts the process of checking backups for consistency. The script then creates and uploads a backup of each project's docker container volume and creates a MySQL database dump file for each project that is then uploaded to the backup server. Subsequently, the script checks the last four archives for consistency and sends an email if errors are found. Finally, the script sends metrics into Prometheus
+
+[**tag_all_droplets.sh**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/tag_all_droplets.sh) - Add a tag to DigitalOcean droplets.
+
+[**ssh_email_new_login.sh**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/ssh_email_new_login.sh) - The script sends an alert if the new SSH login isn't from jump.domain.com. Copy it into `/etc/profile.d`
+
+[**scripts-tools/0/restore_backup_staging.sh**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/scripts-tools/0/restore_backup_staging.sh) - The script will restore only volume of uploads folder or MySQL DB or both.
+
+[**send-wp-plugin-metrics.sh**](https://github.com/rmalenko/scripts-tools/blob/main/scripts/scripts-tools/0/send-wp-plugin-metrics.sh) - Collect some WordPress information of plugins and send them to Prometheus.
